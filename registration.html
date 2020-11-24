@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            body{
+                background-color:lightcyan;
+                background-image: linear-gradient(white, rgb(132, 197, 240));
+            }
+            h2{
+                text-align: center;
+                color:red;
+            }
+            input[type=text],[type=date],[type=email],textarea{
+                width:100%;
+                padding: 12px 15px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border-radius: 4px;
+            }
+            input[type=radio],[type=checkbox]{
+                width:3%;
+                margin: 8px 0;
+            }
+            input[type=submit],[type=reset] {
+                width: 40%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                /* margin: 18px 0; */
+                border:lightseagreen;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size:16px;
+                margin-left: 60px;
+                
+            }
+            input[type=submit]:hover,[type=reset]:hover {
+                background-color: #45a049;
+            }
+            label{
+                font-size: 18px;
+                font-family:serif;
+                font-style:inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="GET">
+            <div>
+                <h2>User Information</h2><br>
+                <label>First Name:</label><input type="text" placeholder="Enter First Name" required><br>
+                <label>Last Name:</label><input type="text" placeholder="Enter Last Name" required><br>
+                <label>Nick Name(Optional):</label><input type="text" placeholder="Please gives your nick name"><br>
+                <label>Email:</label><input type="email" placeholder="Enter Email" required><br>
+                <label>Date of birth:</label><input type="date" required><br>
+                <label>Gender</label><br>
+                    <input type="radio" name="gender" required>Male<br>
+                    <input type="radio" name="gender" required>Female<br>
+                    <input type="radio" name="gender" required>Other<br>
+                <label>Address:</label><br>
+                    <textarea placeholder="Enter your address" required></textarea><br>
+                <label>Highest Qualification</label><br>
+                    <input type="radio" name="Qualification" required>UG<br>
+                    <input type="radio" name="Qualification" required>PG<br>
+                    <input type="radio" name="Qualification" required>PhD<br>
+                <label>Citizenship</label><br>
+                    <input type="checkbox" required>
+                    <label>India</label><br>
+                    <input type="checkbox" >
+                    <label>USA</label><br>
+                    <input type="checkbox" >
+                    <label>UK</label><br>
+                <label>Visit Experience:</label><br>
+                    <textarea placeholder="Describe experience" maxlength="200"></textarea><br><br>
+                <label>Upload Image</label><input type="file" required><br><br>
+            
+                <input type="submit" value="Submit" onclick="myFunction()">
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
+        <script>
+            function myFunction() {
+              confirm("Successfully save your Information!");
+            }
+            </script>
+    </body>
+</html>
